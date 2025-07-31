@@ -10,7 +10,8 @@ function index(req, res) {
             error: true,
             message: err.message
         })
-        // console.log(result);
+        //faccio un map per passare il percorso alle immagini per renderle visualizzabili
+        result.map(item => item.image = `http://localhost:3030/movies_cover/${item.image}`);
         res.json(result)
     })
 }
@@ -38,6 +39,8 @@ function show(req, res) {
             })
             const movieReviews = result;
             movie.result = movieReviews;
+            //passo il percorso delle immagini per renderle visualizzabili
+            movie.image = `http://localhost:3030/movies_cover/${movie.image}`;
             res.json(movie);
         })
     })
