@@ -10,6 +10,10 @@ const moviesRouter = require('./routes/moviesRouter');
 const handleServerError = require('./middlewares/handleServerError');
 //importo la middleware notFoundError
 const notFoundError = require('./middlewares/notFoundError');
+//importo cors
+const corse = require('cors');
+//uso cors
+app.use(cors())
 
 //middleware per immagini in public
 app.use(express.static('public'));
