@@ -11,7 +11,7 @@ const handleServerError = require('./middlewares/handleServerError');
 //importo la middleware notFoundError
 const notFoundError = require('./middlewares/notFoundError');
 //importo cors
-const corse = require('cors');
+const cors = require('cors');
 //uso cors
 app.use(cors())
 
